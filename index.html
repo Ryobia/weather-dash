@@ -11,17 +11,44 @@
 </head>
 
 <body>
-    <header class="container-fluid bg-dark p-2">
+    <header class="container-fluid bg-dark p-2 mb-5">
         <h1 class="text-light">Weather Dashboard</h1>
     </header>
-    <main>
-        <div>
+    <main class="container-fluid bg-light">
+        <section class="row">
+            <div class="col-3">
+                <div id="search-form" class="card bg-dark mb-3">
+                <h4 class="card-title text-light p-1">Search For a City</h4>
+                <input type="text" id="cityInput" autofocus="true" placeholder="Input City Name"> 
+                <button type="submit" id="searchBtn" class="bg-primary btn">Get Weather</button>
+                </div>
 
-        </div>
-        <div>
-            <div id="city-info-today"></div>
-            <div></div>
-        </div>
+                <div id="recentCities" class="list-group">
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                    <p class="list-group-item">Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div id="city-info-today" class="border mb-3">
+                    <h3 id="cityName">City Name</h3>
+                    <p>Temperature: <span id="temp"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>
+                    <p>Wind Speed: <span id="wind"></span></p>
+                    <p>UV Index: <span id="uv"></span></p>
+                </div>
+
+                <div id="city-info-5" class="border"> 
+                    5day
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="./assets/js/script.js"></script>
