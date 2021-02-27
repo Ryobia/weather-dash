@@ -26,21 +26,22 @@
                 <div id="recentCities" class="list-group">
                     
                 </div>
+                <button class="btn bg-primary" onclick="clearHistory()">Clear History</button>
             </div>
             
             <div class="col">
                 <div id="city-info-today" class="border mb-3 p-2 lightbg">
-                    <h3 id="cityName" class="uppercase">City Name</h3>
-                    <p>Temperature: <span id="temp"></span></p>
-                    <p>Humidity: <span id="humidity"></span></p>
-                    <p>Wind Speed: <span id="wind"></span></p>
-                    <p>UV Index: <span id="uv" class=""></span></p>
+                    <h3 id="cityName" class="uppercase lightbg"></h3>
+                    <p><span id="temp"></span></p>
+                    <p><span id="humidity"></span></p>
+                    <p><span id="wind"></span></p>
+                    <p><span id="uv" class=""></span></p>
                 </div>
 
                 <div id="city-info-5" class="border lightbg"> 
-                    <h3>5-Day Forecast</h3>
-                    <div>
-                        <div></div>
+                    <h3 id="word"></h3>
+                    <div id="forecast" class="d-flex flex-row flex-wrap justify-content-between">
+                        
                     </div>
                 </div>
             </div>

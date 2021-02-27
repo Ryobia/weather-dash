@@ -2,6 +2,21 @@
     background-color: rgb(182, 221, 255);
 }
 
+.greenbg {
+    background-color: rgb(2, 190, 2);
+    border-radius: 15px;
+}
+
+.yellowbg {
+    background-color: rgb(238, 255, 0);
+    border-radius: 15px;
+}
+
+.redbg {
+    background-color: red;
+    border-radius: 15px;
+}
+
 li:hover {
     background-color: rgb(182, 221, 255);
 }
