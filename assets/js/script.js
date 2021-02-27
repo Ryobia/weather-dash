@@ -1,4 +1,3 @@
-//1a1a4aef6e9046cf67298da62f4ac232 - OWM key
 const today = new Date;
 const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -28,7 +27,7 @@ let fiveDayEl = document.querySelector("#word");
 
 
 let getWeatherToday = function(city) {
-    let apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=1a1a4aef6e9046cf67298da62f4ac232";
+    let apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid={API KEY}";
 
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
@@ -37,7 +36,7 @@ let getWeatherToday = function(city) {
                 let lon = data.coord.lon;
                 
                 fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon="
-                 + lon +"&exclude=hourly,minutely&units=imperial&appid=1a1a4aef6e9046cf67298da62f4ac232")
+                 + lon +"&exclude=hourly,minutely&units=imperial&appid={API KEY}")
                     .then(function(response) {
                         response.json().then(function(data) {
                             console.log(data);
