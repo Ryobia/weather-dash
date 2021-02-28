@@ -27,7 +27,7 @@ let fiveDayEl = document.querySelector("#word");
 
 
 let getWeatherToday = function(city) {
-    let apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid={API KEY}";
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=1a1a4aef6e9046cf67298da62f4ac232";
 
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
@@ -35,8 +35,8 @@ let getWeatherToday = function(city) {
                 let lat = data.coord.lat;
                 let lon = data.coord.lon;
                 
-                fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon="
-                 + lon +"&exclude=hourly,minutely&units=imperial&appid={API KEY}")
+                fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon="
+                 + lon +"&exclude=hourly,minutely&units=imperial&appid=1a1a4aef6e9046cf67298da62f4ac232")
                     .then(function(response) {
                         response.json().then(function(data) {
                             console.log(data);
