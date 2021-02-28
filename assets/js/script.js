@@ -96,7 +96,7 @@ let getWeatherToday = function(city) {
 
 let changeIcon = function(icon) {
     
-    img.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+    img.src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
     cityInfoToday.appendChild(img);
 };
 
@@ -128,7 +128,7 @@ let displayForecast = function(forecast) {
             dateEl.textContent = f.day;
             cardEl.appendChild(dateEl);
         let forecastIconEl = document.createElement("img");
-            forecastIconEl.src = "http://openweathermap.org/img/wn/" + f.icon + "@2x.png";
+            forecastIconEl.src = "https://openweathermap.org/img/wn/" + f.icon + "@2x.png";
             cardEl.appendChild(forecastIconEl);
         let tempEl = document.createElement("p");
             tempEl.textContent = "Temperature: " + f.temp + " °F";
